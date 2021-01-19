@@ -4,13 +4,13 @@
 
 
 // variante con let
-// let n = parseInt(prompt('key in a number'));
-// if (n % 2 != 0) {
-//   n++;
-//   console.log('stampo il numero successivo: ' + n);
-// } else {
-//   console.log('stampo il numero digitato: ' + n);
-// }
+let n = parseInt(prompt('key in a number'));
+if (n % 2 != 0) {
+  n++;
+  console.log('stampo il numero successivo: ' + n);
+} else {
+  console.log('stampo il numero digitato: ' + n);
+}
 
 
-// variante con const
+// variante con const non applicabile perchè ci serve incrementare il numero

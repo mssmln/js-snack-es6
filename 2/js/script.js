@@ -41,3 +41,39 @@
 
 
 // variante const
+const arrayNumeri = [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  0,
+];
+const dispari = [];
+const pari = [];
+const colorRed = 'red';
+const colorGreen = 'green';
+
+
+for (let i = 0; i < arrayNumeri.length; i++) {
+  if (arrayNumeri[i] % 2 != 0) {
+    dispari.push(arrayNumeri[i]);
+    document.getElementById('red').innerHTML = `
+      <li class="${colorRed}">
+        ${dispari}
+      </li>
+    `
+  } else {
+    pari.push(arrayNumeri[i]);
+    document.getElementById('green').innerHTML = `
+      <li class="${colorGreen}">
+        ${pari}
+      </li>
+    `
+  }
+
+}

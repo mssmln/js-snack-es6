@@ -18,7 +18,7 @@ const bici = [
   },
   {
     nome : 'bici4',
-    peso : 8,
+    peso : 1,
   },
   {
     nome : 'bici5',
@@ -29,4 +29,12 @@ const bici = [
 // const peso = bici[0]['peso'];
 // console.log(peso); // valore 5
 const [peso] = bici // stessa cosa ma con destructuring mode
-console.log(peso.peso); // valore 5
+// console.log(peso.peso); // valore 5
+
+for (let i = 1; i < bici.length; i++) {
+  if (peso.peso < bici[i].peso) {
+    console.log(peso.peso);
+  } else {
+    console.log(bici[i].peso);
+  }
+}

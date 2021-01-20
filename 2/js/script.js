@@ -64,7 +64,7 @@ for (let i = 0; i < arrayNumeri.length; i++) {
     dispari.push(arrayNumeri[i]);
     document.getElementById('red').innerHTML = `
       <li class="${colorRed}">
-        ${dispari}
+        ${dispari} // nella correzione hanno usato ${arrayNumeri[i]} invece che un array come me
       </li>
     `
   } else {

@@ -26,15 +26,15 @@ const bici = [
   },
 ];
 
-// const peso = bici[0]['peso'];
-// console.log(peso); // valore 5
-const [peso] = bici // stessa cosa ma con destructuring mode
-// console.log(peso.peso); // valore 5
+// const biciUno = bici[0]['peso'];
+// console.log(biciUno); // valore 5
+let [biciUno] = bici; // stessa cosa ma con destructuring mode
+console.log('destructuring' , biciUno.peso); // valore 5
+
 
 for (let i = 1; i < bici.length; i++) {
-  if (peso.peso < bici[i].peso) {
-    console.log(peso.peso);
-  } else {
-    console.log(bici[i].peso);
+  if (bici[i].peso < biciUno.peso) {
+    biciUno = bici[i];
   }
 }
+console.log(biciUno.nome);

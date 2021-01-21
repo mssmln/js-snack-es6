@@ -18,23 +18,40 @@ const bici = [
   },
   {
     nome : 'bici4',
-    peso : 1,
+    peso : 2,
   },
   {
     nome : 'bici5',
     peso : 9,
   },
+  {
+    nome : 'bici6',
+    peso : 1,
+  },
 ];
 
-// const biciUno = bici[0]['peso'];
+// ****************
+// let biciUno = bici[0];
+// // let [biciUno] = bici; // stessa cosa ma con destructuring mode
+// console.log('valore peso bici uno' , biciUno.peso); // valore 5
+//
+// // variante for
+// for (let i = 1; i < bici.length; i++) {
+//   if (bici[i].peso < biciUno.peso) {
+//     biciUno = bici[i];
+//   }
+// }
+// console.log(biciUno.nome , 'ha un peso di' , biciUno.peso);
+// *****************
+
+
+// *************
+let biciUno = bici[0].peso;
 // console.log(biciUno); // valore 5
-let [biciUno] = bici; // stessa cosa ma con destructuring mode
-console.log('destructuring' , biciUno.peso); // valore 5
-
-
-for (let i = 1; i < bici.length; i++) {
-  if (bici[i].peso < biciUno.peso) {
-    biciUno = bici[i];
+bici.forEach((item) => {
+  const {nome, peso} = item;
+  if (peso < biciUno) {
+    biciUno = peso;
+    console.log(biciUno);
   }
-}
-console.log(biciUno.nome);
+});
